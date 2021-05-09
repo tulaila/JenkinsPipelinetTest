@@ -2,32 +2,27 @@ pipeline{
 agent any
 stages 
 {
-stage('Build') 
-{
-steps{
-echo "Building the Code.........."
-bat "mvn clean"
+stage('Build & Compile Staging') {
+steps {
+withMaven(maven : 'Maven_3.8.1') {
+   sh 'mvn clean compile'
 }
 }
-stage('Test') 
-{
-steps{
-echo "Testing the Code.........."
-bat "mvn test"
+}
+stage('Testing Stage') {
+steps {
+withMaven(maven : 'Maven_3.8.1') {
+   sh 'mvn test'
 }
 }
-stage('Compile') 
-{
-steps{
-echo "Compiling the Project.........."
-bat "mvn compile"
+}
+stage('Deployment Stage') {
+steps {
+withMaven(maven : 'Maven_3.8.1') {
+   sh 'mvn deploy'
 }
 }
-stage('Deploy') 
-{
-steps{
-echo "Deploying the Project.........."
 }
-}
+
 }
 }
