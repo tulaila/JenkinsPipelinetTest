@@ -4,20 +4,34 @@ pipeline {
         maven 'Maven 3.8.1' 
         jdk 'jdk8' 
     }
-    stages {
-        stage ('Initialize') {
-            steps {
-                bat '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
-            }
-        }
-
-        stage ('Build') {
-            steps {
-                echo 'This is a minimal pipeline.'
-            }
-        }
-    }
+    stages 
+{
+stage('Build') 
+{
+steps{
+echo "Building the Code.........."
+bat "mvn clean"
+}
+}
+stage('Test') 
+{
+steps{
+echo "Testing the Code.........."
+bat "mvn test"
+}
+}
+stage('Compile') 
+{
+steps{
+echo "Compiling the Project.........."
+bat "mvn compile"
+}
+}
+stage('Deploy') 
+{
+steps{
+echo "Deploying the Project.........."
+}
+}
+}
 }
