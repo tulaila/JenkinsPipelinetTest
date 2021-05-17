@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-07T16:01:16 EDT" name="Suite" finished-at="2021-05-07T16:01:22 EDT" duration-ms="6241">
+  <suite name="Suite" duration-ms="6817" started-at="2021-05-09T11:08:55 EDT" finished-at="2021-05-09T11:09:02 EDT">
     <groups>
     </groups>
-    <test started-at="2021-05-07T16:01:16 EDT" name="Test" finished-at="2021-05-07T16:01:22 EDT" duration-ms="6241">
+    <test name="Test" duration-ms="6817" started-at="2021-05-09T11:08:55 EDT" finished-at="2021-05-09T11:09:02 EDT">
       <class name="mypackage.myTest">
-        <test-method signature="searchPage()[pri:0, instance:mypackage.myTest@291b4bf5]" started-at="2021-05-07T16:01:16 EDT" name="searchPage" finished-at="2021-05-07T16:01:22 EDT" duration-ms="6218" status="PASS">
+        <test-method status="PASS" signature="searchPage()[pri:0, instance:mypackage.myTest@71318ec4]" name="searchPage" duration-ms="6793" started-at="2021-05-09T11:08:55 EDT" finished-at="2021-05-09T11:09:02 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchPage -->
