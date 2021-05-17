@@ -22,9 +22,9 @@ public class myTest {
 		WebElement element = driver.findElement(By.name("q"));
         element.sendKeys("Selenium");
         element.submit();
-        System.out.println("========================================");
-        System.out.println(" Selenium script Sucessfully Executed   ");
-        System.out.println("========================================");
+        System.out.println("===========================================");
+        System.out.println(" Selenium Script is Sucessfully Executed   ");
+        System.out.println("===========================================");
         driver.close();
 	}
 }   	  
